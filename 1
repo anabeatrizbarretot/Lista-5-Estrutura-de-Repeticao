@@ -1,0 +1,20 @@
+/******************************************************************************
+. Faça um algoritmo que calcule o valor de S:
+
+Caso de teste:
+O valor da soma é de aproximadamente 95,5.  
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    float numerador = 1, denominador = 1, S = 0;
+
+    while (denominador <= 50) {
+        S = S + numerador / denominador;
+        numerador = numerador + 2;
+        denominador = denominador + 1;
+    }
+
+    printf("O valor de S é: %.1f\n", S);
+    return 0;
+}
