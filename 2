@@ -1,0 +1,23 @@
+/******************************************************************************
+Faça um algoritmo que calcule o valor de S:
+
+Caso de teste:
+O valor da soma é 1560828692041339,75. 
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>  
+
+int main() {
+    int expoente = 1;
+    int denominador = 50;
+    double S = 0;  
+
+    while (expoente <= 50) {
+        S = S + pow(2, expoente) / denominador;
+        expoente++;
+        denominador--;
+    }
+
+    printf("O valor da soma é: %.2lf\n", S);
+    return 0;
+}
