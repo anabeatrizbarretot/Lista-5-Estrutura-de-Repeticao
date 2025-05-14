@@ -1,0 +1,30 @@
+/******************************************************************************
+Faça um algoritmo que calcule o valor de S:
+
+Caso de teste:
+O valor da soma é 0,65. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    double S = 0.0; // Variável acumuladora da soma
+    int i;
+
+    // Laço de 1 até 10
+    for (i = 1; i <= 10; i++) {
+        double termo = (double)i / (i * i); // Calcula o termo: i / (i^2)
+        
+        // Alterna o sinal do termo
+        if (i % 2 == 0) {
+            termo = -termo; // Subtrai se i for par
+        }
+
+        S += termo; // Soma (ou subtrai) o termo à variável S
+    }
+
+    // Exibe o resultado com duas casas decimais
+    printf("O valor da soma é %.2f\n", S);
+
+    return 0;
+}
