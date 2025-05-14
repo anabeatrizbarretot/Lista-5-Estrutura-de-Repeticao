@@ -1,0 +1,33 @@
+/******************************************************************************
+Faça um algoritmo que calcule o valor de N! (fatorial de N), considerando que:
+0! = 1, 𝑝𝑜𝑟 𝑑𝑒𝑓𝑖𝑛𝑖çã𝑜
+𝑁! = 1 × 2 × 3 × … × (𝑁 − 1) × 𝑁
+Caso de teste:
+a) 0! é igual a 1;
+b) 5! é igual a 120 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int N, i;
+    int fatorial = 1; // Variável para armazenar o resultado do fatorial
+
+    // Lê o valor de N
+    printf("Digite um número inteiro N: ");
+    scanf("%d", &N);
+
+    // Verifica se o número é negativo
+    if (N < 0) {
+        printf("Fatorial não é definido para números negativos.\n");
+    } else {
+        // Calcula o fatorial de N
+        for (i = 1; i <= N; i++) {
+            fatorial = fatorial * i;
+
+        }
+        printf("%d! = %d\n", N, fatorial);
+    }
+
+    return 0;
+}
